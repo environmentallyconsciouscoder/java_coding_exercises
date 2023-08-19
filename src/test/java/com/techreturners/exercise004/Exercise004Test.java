@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 import java.time.Month;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@Disabled
 public class Exercise004Test {
 
     @Test

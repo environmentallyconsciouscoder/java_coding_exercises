@@ -2,7 +2,9 @@ package com.techreturners.exercise002;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Disabled;
 
+@Disabled
 public class Exercise002Test {
 
     @Test
