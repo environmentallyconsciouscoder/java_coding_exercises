@@ -7,7 +7,6 @@ import java.time.LocalDateTime;
 import java.time.Month;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@Disabled
 public class Exercise004Test {
 
     @Test
@@ -19,7 +18,6 @@ public class Exercise004Test {
         assertEquals(expected, ex004.getDateTime());
     }
 
-    @Disabled("You can remove this @Disabled annotation to run the test")
     @Test
     public void checkGetDateTimeWhenBothDateAndTimeIsSpecified() {
 
@@ -29,7 +27,6 @@ public class Exercise004Test {
         assertEquals(expected, ex004.getDateTime());
     }
 
-    @Disabled("You can remove this @Disabled annotation to run the test")
     @Test
     public void checkGetDateTimeWhenBothDateAndTimeIsSpecifiedWithDayRollOver() {
 
