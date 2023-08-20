@@ -6,9 +6,8 @@ public class Exercise002 {
         return person.getLocation().equals("Manchester");
     }
 
-    public boolean canWatchFilm(/* Person person, int ageLimit*/) {
-        // Add your code here
-        return false;
+    public boolean canWatchFilm(Person person, int ageLimit) {
+        return person.getAge() >= ageLimit;
     }
-    
+
 }
