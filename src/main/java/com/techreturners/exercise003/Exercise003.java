@@ -11,27 +11,32 @@ public class Exercise003 {
 
     int getIceCreamCode(String iceCreamFlavour) {
         int iceCreamCode = 0;
-
-        if (iceCreamFlavour == pistachio) {
-            iceCreamCode = 0;
-        } else if (iceCreamFlavour == raspberryRipple) {
-            iceCreamCode = 1;
-        } else if (iceCreamFlavour == vanilla) {
-            iceCreamCode = 2;
-        } else if (iceCreamFlavour == mintChocolateChip) {
-            iceCreamCode = 3;
-        } else if (iceCreamFlavour == chocolate) {
-            iceCreamCode = 4;
-        } else if (iceCreamFlavour == mangoSorbet) {
-            iceCreamCode = 5;
+        switch (iceCreamFlavour) {
+            case "Pistachio":
+                iceCreamCode = 0;
+                break;
+            case "Raspberry Ripple":
+                iceCreamCode = 1;
+                break;
+            case "Mint Chocolate Chip":
+                iceCreamCode = 3;
+                break;
+            case "Chocolate":
+                iceCreamCode = 4;
+                break;
+            case "Mango Sorbet":
+                iceCreamCode = 5;
+                break;
+            default:
+                System.out.println("Invalid ice cream flavor");
         }
 
         return iceCreamCode;
     }
 
+
     String[] iceCreamFlavours() {
-        String[] currentFlavours = { pistachio, raspberryRipple, vanilla, mintChocolateChip, chocolate, mangoSorbet };
-        return currentFlavours;
+        return new String[] { pistachio, raspberryRipple, vanilla, mintChocolateChip, chocolate, mangoSorbet };
     }
 
 }

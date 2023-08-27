@@ -2,15 +2,18 @@ package com.techreturners.exercise001;
 
 import java.util.List;
 import java.text.DecimalFormat;
+import java.util.Objects;
+
+import static java.lang.Character.toUpperCase;
 
 public class Exercise001 {
     public String capitalizeWord(String word) {
         // Add your code here
-        return Character.toUpperCase(word.charAt(0)) + word.substring(1);
+        return toUpperCase(word.charAt(0)) + word.substring(1);
     }
 
     public String generateInitials(String firstName, String lastName) {
-        return Character.toUpperCase(firstName.charAt(0)) + "." + Character.toUpperCase(lastName.charAt(0));
+        return toUpperCase(firstName.charAt(0)) + "." + toUpperCase(lastName.charAt(0));
     }
 
     public double addVat(double originalPrice, double vatRate) {
@@ -34,12 +37,6 @@ public class Exercise001 {
     }
 
     public int countLinuxUsers(List<User> users) {
-        int count = 0;
-        for(User user : users) {
-            if (user.getType() == "Linux") {
-                count += 1;
-            }
-        }
-        return count;
+        return (int) users.stream().filter(user -> Objects.equals(user.getType(), "Linux")).count();
     }
 }
